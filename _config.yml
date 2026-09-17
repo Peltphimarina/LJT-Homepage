@@ -48,10 +48,9 @@ social:
 analytics:
   provider               : "false"
 
-# Only the homepage and the existing publications page are published.
+# Publish the existing homepage and publications page only.
 include:
-  - _pages/about.md
-  - _pages/publications.html
+  - _pages
 exclude:
   - ".devcontainer"
   - ".github"
@@ -61,6 +60,23 @@ exclude:
   - "LICENSE"
   - "README.md"
   - "_drafts"
+  - "_pages/404.md"
+  - "_pages/archive-layout-with-content.md"
+  - "_pages/category-archive.html"
+  - "_pages/collection-archive.html"
+  - "_pages/cv-json.md"
+  - "_pages/cv.md"
+  - "_pages/markdown.md"
+  - "_pages/non-menu-page.md"
+  - "_pages/page-archive.html"
+  - "_pages/portfolio.html"
+  - "_pages/sitemap.md"
+  - "_pages/tag-archive.html"
+  - "_pages/talkmap.html"
+  - "_pages/talks.html"
+  - "_pages/teaching.html"
+  - "_pages/terms.md"
+  - "_pages/year-archive.html"
   - "_portfolio"
   - "_posts"
   - "_publications"
