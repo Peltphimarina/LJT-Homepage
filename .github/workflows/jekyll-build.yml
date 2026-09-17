@@ -30,3 +30,12 @@ jobs:
         run: bundle exec jekyll build --strict_front_matter
         env:
           JEKYLL_ENV: production
+
+      - name: Verify generated pages
+        shell: bash
+        run: |
+          mapfile -t pages < <(find _site -type f -name '*.html' -printf '%P\n' | sort)
+          printf 'Generated HTML pages:\n%s\n' "${pages[*]}"
+          test "${#pages[@]}" -eq 2
+          test "${pages[0]}" = "index.html"
+          test "${pages[1]}" = "publications/index.html"
